@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "706e9042-cf51-4550-82ff-2a956ab21b00": {
+      "ProjectGuid": "706e9042-cf51-4550-82ff-2a956ab21b00",
+      "DisplayName": "Tienda",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Archivos varios",
+      "ColorIndex": -1
+    },
+    "b9eb1d26-8227-44d1-8447-263fc876bd13": {
+      "ProjectGuid": "b9eb1d26-8227-44d1-8447-263fc876bd13",
+      "DisplayName": "EntitySystem",
+      "ColorIndex": 1
+    },
+    "998d88ad-07c8-4d02-bfcc-afc1b45334a7": {
+      "ProjectGuid": "998d88ad-07c8-4d02-bfcc-afc1b45334a7",
+      "DisplayName": "TiendaSystem",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

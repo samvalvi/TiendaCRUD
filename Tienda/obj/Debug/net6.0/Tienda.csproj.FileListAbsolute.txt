@@ -1,0 +1,14 @@
+C:\Software\C#\Course\Database\EF_ORM\DB_FIRST\Tienda\Tienda\bin\Debug\net6.0\Tienda.deps.json
+C:\Software\C#\Course\Database\EF_ORM\DB_FIRST\Tienda\Tienda\bin\Debug\net6.0\Tienda.runtimeconfig.json
+C:\Software\C#\Course\Database\EF_ORM\DB_FIRST\Tienda\Tienda\bin\Debug\net6.0\Tienda.dll
+C:\Software\C#\Course\Database\EF_ORM\DB_FIRST\Tienda\Tienda\bin\Debug\net6.0\ref\Tienda.dll
+C:\Software\C#\Course\Database\EF_ORM\DB_FIRST\Tienda\Tienda\bin\Debug\net6.0\Tienda.pdb
+C:\Software\C#\Course\Database\EF_ORM\DB_FIRST\Tienda\Tienda\obj\Debug\net6.0\Tienda.csproj.AssemblyReference.cache
+C:\Software\C#\Course\Database\EF_ORM\DB_FIRST\Tienda\Tienda\obj\Debug\net6.0\Tienda.GeneratedMSBuildEditorConfig.editorconfig
+C:\Software\C#\Course\Database\EF_ORM\DB_FIRST\Tienda\Tienda\obj\Debug\net6.0\Tienda.AssemblyInfoInputs.cache
+C:\Software\C#\Course\Database\EF_ORM\DB_FIRST\Tienda\Tienda\obj\Debug\net6.0\Tienda.AssemblyInfo.cs
+C:\Software\C#\Course\Database\EF_ORM\DB_FIRST\Tienda\Tienda\obj\Debug\net6.0\Tienda.csproj.CoreCompileInputs.cache
+C:\Software\C#\Course\Database\EF_ORM\DB_FIRST\Tienda\Tienda\obj\Debug\net6.0\Tienda.dll
+C:\Software\C#\Course\Database\EF_ORM\DB_FIRST\Tienda\Tienda\obj\Debug\net6.0\ref\Tienda.dll
+C:\Software\C#\Course\Database\EF_ORM\DB_FIRST\Tienda\Tienda\obj\Debug\net6.0\Tienda.pdb
+C:\Software\C#\Course\Database\EF_ORM\DB_FIRST\Tienda\Tienda\obj\Debug\net6.0\Tienda.genruntimeconfig.cache
