@@ -31,6 +31,9 @@ namespace TiendaSystem
                     case 2:
                         Add(optionsBuilder);
                         break;
+                    case 3:
+                        Update(optionsBuilder);
+                        break;
                     case 5:
                         Environment.Exit(0);
                         break;
@@ -60,7 +63,7 @@ namespace TiendaSystem
         public static void Add(DbContextOptionsBuilder<TiendaContext>optionsBuilder)
         {
             Console.Clear();
-            Console.WriteLine("Agregar producto:");
+            Console.WriteLine("Agregar producto");
             Console.Write("Nombre: ");
 #pragma warning disable CS8600 // Se va a convertir un literal nulo o un posible valor nulo en un tipo que no acepta valores NULL
             string name = Console.ReadLine();
@@ -79,6 +82,30 @@ namespace TiendaSystem
             using var db = new TiendaContext(optionsBuilder.Options);
             Producto producto = new Producto(name, specialPrice, publicPrice, brand, stock);
             db.Add(producto);
+            db.SaveChanges();
+        }
+
+        public static void Update(DbContextOptionsBuilder<TiendaContext>optionsBuilder)
+        {
+            Console.Clear();
+            Show(optionsBuilder);
+            Console.WriteLine("Actualizar producto");
+            Console.Write("Producto id: ");
+            int productoId = int.Parse(Console.ReadLine());
+            Console.Write("Nombre: ");
+            string name = Console.ReadLine();
+            Console.Write("Precio especial: ");
+            decimal specialPrice = decimal.Parse(Console.ReadLine());
+            Console.Write("Precio público: ");
+            decimal publicPrice = decimal.Parse(Console.ReadLine());
+            Console.Write("Marca: ");
+            string brand = Console.ReadLine();
+            Console.Write("Stock: ");
+            int stock = int.Parse(Console.ReadLine());
+
+            using var db = new TiendaContext(optionsBuilder.Options);
+            Producto producto = new Producto(productoId, name, publicPrice, specialPrice, brand, stock);
+            db.Update(producto);
             db.SaveChanges();
         }
     }
