@@ -18,7 +18,6 @@ namespace TiendaSystem
 
             do
             {
-                Console.Clear();
                 Console.WriteLine("Seleccione una opción:");
                 Console.WriteLine("1- Mostrar productos \n2-Insertar producto \n3-Editar producto \n4-Eliminar producto \n5-Salir");
                 op = int.Parse(Console.ReadLine());
@@ -33,6 +32,9 @@ namespace TiendaSystem
                         break;
                     case 3:
                         Update(optionsBuilder);
+                        break;
+                    case 4:
+                        Delete(optionsBuilder);
                         break;
                     case 5:
                         Environment.Exit(0);
@@ -83,6 +85,7 @@ namespace TiendaSystem
             Producto producto = new Producto(name, specialPrice, publicPrice, brand, stock);
             db.Add(producto);
             db.SaveChanges();
+            Console.WriteLine();
         }
 
         public static void Update(DbContextOptionsBuilder<TiendaContext>optionsBuilder)
@@ -105,8 +108,33 @@ namespace TiendaSystem
 
             using var db = new TiendaContext(optionsBuilder.Options);
             Producto producto = new Producto(productoId, name, publicPrice, specialPrice, brand, stock);
-            db.Update(producto);
+            db.Productos.Update(producto);
             db.SaveChanges();
+            Console.WriteLine();
+        }
+
+        public static void Delete(DbContextOptionsBuilder<TiendaContext> optionsBuilder)
+        {
+            Console.Clear();
+            Show(optionsBuilder);
+            Console.WriteLine("Eliminar producto");
+            Console.Write("Ingrese el id del producto: ");
+            int productoId = int.Parse(Console.ReadLine());
+
+            using var db = new TiendaContext(optionsBuilder.Options);
+#pragma warning disable CS8600 // Se va a convertir un literal nulo o un posible valor nulo en un tipo que no acepta valores NULL
+            Producto productToDelete = db.Productos.Find(productoId);
+#pragma warning restore CS8600 // Se va a convertir un literal nulo o un posible valor nulo en un tipo que no acepta valores NULL
+            if (productToDelete != null)
+            {
+                db.Productos.Remove(productToDelete);
+                db.SaveChanges();
+                Console.WriteLine(Environment.NewLine);
+            }
+            else
+            {
+                Console.WriteLine();
+            }
         }
     }
 }
